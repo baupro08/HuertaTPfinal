@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.semaforo {
+    width: 70px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #222;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.luz {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    opacity: 0.25;
+    transition: 0.3s;
+}
+
+.rojo { background: red; }
+.amarillo { background: yellow; }
+.verde { background: lime; }
+
+.estado {
+    margin-top: 15px;
+}
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+    animation: flotar 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}

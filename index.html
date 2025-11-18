@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores - Semáforos Inteligentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="titulo">Panel de Estado de Sensores</h1>
+
+    <div class="contenedor">
+
+        <!-- SEMÁFORO HUMEDAD DEL SUELO -->
+        <div class="tarjeta">
+            <h2>Humedad del Suelo</h2>
+            
+            <div class="semaforo" id="semaforo-suelo">
+                <span class="luz rojo"></span>
+                <span class="luz amarillo"></span>
+                <span class="luz verde"></span>
+            </div>
+
+            <div class="estado">
+                <div class="icono" id="icono-suelo">🌱</div>
+                <p id="msg-suelo">Cargando...</p>
+            </div>
+        </div>
+
+        <!-- SEMÁFORO HUMEDAD DEL AIRE -->
+        <div class="tarjeta">
+            <h2>Humedad del Aire</h2>
+
+            <div class="semaforo" id="semaforo-aire">
+                <span class="luz rojo"></span>
+                <span class="luz amarillo"></span>
+                <span class="luz verde"></span>
+            </div>
+
+            <div class="estado">
+                <div class="icono" id="icono-aire">💨</div>
+                <p id="msg-aire">Cargando...</p>
+            </div>
+        </div>
+
+        <!-- SEMÁFORO TEMPERATURA -->
+        <div class="tarjeta">
+            <h2>Temperatura</h2>
+
+            <div class="semaforo" id="semaforo-temp">
+                <span class="luz rojo"></span>
+                <span class="luz amarillo"></span>
+                <span class="luz verde"></span>
+            </div>
+
+            <div class="estado">
+                <div class="icono" id="icono-temp">🌡️</div>
+                <p id="msg-temp">Cargando...</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
