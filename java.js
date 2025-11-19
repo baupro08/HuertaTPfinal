@@ -1,5 +1,3 @@
-
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
 
@@ -12,3 +10,13 @@ const firebaseConfig = {
     messagingSenderId: "104414144386",
     appId: "1:104414144386:web:da627197af20c48eb7119b"
 };
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const sensoresRef = ref(db, "Sensores/nodemcu01");
+
+onValue(sensoresRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log("Datos recibidos desde Firebase:", data);
+});
