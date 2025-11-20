@@ -14,9 +14,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const sensoresRef = ref(db, "Sensores/nodemcu01");
+const sensoresRef = ref(db, "sensores/nodemcu01");
 
 onValue(sensoresRef, (snapshot) => {
     const data = snapshot.val();
     console.log("Datos recibidos desde Firebase:", data);
 });
+
+
+if (data <20 ) {
+    document.querySelector(msg-temp("el suelo esta muy seco"))
+}
