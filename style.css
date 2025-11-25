@@ -59,3 +59,7 @@ body {
     animation: flotar 1.5s infinite alternate ease-in-out;
 }
 
+.encendida {
+    opacity: 1 !important;
+}
+
