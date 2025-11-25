@@ -1,20 +1,32 @@
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+import { getDatabase, ref, onValue, off } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDllEU7AG4Alvu8pPADt-TSlFMR5clNBj8",
-    authDomain: "proyectogrupohuerta-9e970.firebaseapp.com",
-    databaseURL: "https://proyectogrupohuerta-9e970-default-rtdb.firebaseio.com",
-    projectId: "proyectogrupohuerta-9e970",
-    storageBucket: "proyectogrupohuerta-9e970.firebasestorage.app",
-    messagingSenderId: "104414144386",
-    appId: "1:104414144386:web:da627197af20c48eb7119b"
+    
+    apiKey: "AIzaSyCrB4xgCBRmpujDcvOOihSVZ6MIFOPE56M",
+
+    authDomain: "proyectoclase1-2025.firebaseapp.com",
+
+    databaseURL: "https://huertamaxi2025-default-rtdb.firebaseio.com",
+
+    projectId: "proyectoclase1-2025",
+
+    storageBucket: "proyectoclase1-2025.firebasestorage.app",
+
+    messagingSenderId: "822869341917",
+
+    appId: "1:822869341917:web:8d4d76a6493df78963cd34"
+
 };
 
+
+
 const app = initializeApp(firebaseConfig);
+
 const db = getDatabase(app);
 
-const sensoresRef = ref(db, "sensores/nodemcu01");
+const sensoresRef = ref(db, "/");
 
 onValue(sensoresRef, (snapshot) => {
     const data = snapshot.val();
@@ -39,7 +51,7 @@ function actualizarSemaforo(idSemaforo, color) {
 
 
 
-onValue(ref(db, "sensores/humedadSuelo"), (snapshot) => {
+onValue(ref(db, "/humedadSuelo"), (snapshot) => {
     const valor = snapshot.val();
     document.getElementById("msg-suelo").textContent = valor + "%";
 
@@ -49,7 +61,7 @@ onValue(ref(db, "sensores/humedadSuelo"), (snapshot) => {
 });
 
 
-onValue(ref(db, "sensores/humedadAire"), (snapshot) => {
+onValue(ref(db, "/humedadAire"), (snapshot) => {
     const valor = snapshot.val();
     document.getElementById("msg-aire").textContent = valor + "%";
 
@@ -61,7 +73,7 @@ onValue(ref(db, "sensores/humedadAire"), (snapshot) => {
 
 
 
-onValue(ref(db, "sensores/temperatura"), (snapshot) => {
+onValue(ref(db, "/temperatura"), (snapshot) => {
     const valor = snapshot.val();
     document.getElementById("msg-temp").textContent = valor + "°C";
 
